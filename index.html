@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Propuesta de Pepsi</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo Pepsi" class="logo">
+            </a>
+
+            <!-- Botón de menú hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links del menú -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Novedades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Contáctanos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="seccion">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Esto es lo que <br><span>Me gusta</span></h2>
+                    <p>
+                        ¿Te gustan las nuevas experiencias? ¡Entonces te encantarán nuestras ediciones especiales 
+                        y sabores únicos!
+                    </p>
+                    <button class="btn-light" onclick="scrollToSection('tipos-pepsi')">
+                        <span>VER TODOS LOS PRODUCTOS</span>
+                    </button>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="images/pepsi001.png" alt="Pepsi" class="Pepsi img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tipos de Pepsi -->
+    <section id="tipos-pepsi" class="tipos-pepsi text-center py-5">
+        <div class="container">
+            <h2>Nuestros Tipos de Pepsi</h2>
+            <p>¡Pruebalos ya!</p>
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="images/pepsi001.png" alt="Pepsi Clásica" class="card-img-top" onclick="deslizarImagen('images/pepsi001.png'); cambiarFondo('#0062be')">
+                        <div class="card-body">
+                            <p class="card-text">Pepsi Clásica</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="images/pepsi002.png" alt="Pepsi Light" class="card-img-top" onclick="deslizarImagen('images/pepsi002.png'); cambiarFondo('#e60c2c')">
+                        <div class="card-body">
+                            <p class="card-text">Pepsi Light</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="images/pepsi003.png" alt="Pepsi Zero" class="card-img-top" onclick="deslizarImagen('images/pepsi003.png'); cambiarFondo('#1e1e1e')">
+                        <div class="card-body">
+                            <p class="card-text">Pepsi Zero</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos -->
+    <section class="videos py-5">
+        <div class="container text-center">
+            <h2>PEPSI</h2>
+            <p>¡Refresca tu día con el sabor único de Pepsi!</p>
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <video controls class="img-fluid w-100" autoplay muted loop>
+                        <source src="video/video1.mp4" type="video/mp4">
+                        <source src="video/video1.webm" type="video/webm">
+                        <source src="video/video1.ogg" type="video/ogg">
+                        Tu navegador no admite la reproducción de video.
+                    </video>
+                </div>
+                <div class="col-12 mb-4">
+                    <video controls class="img-fluid w-100" autoplay muted loop>
+                        <source src="video/video2.mp4" type="video/mp4">
+                        <source src="video/video2.webm" type="video/webm">
+                        <source src="video/video2.ogg" type="video/ogg">
+                        Tu navegador no admite la reproducción de video.
+                    </video>
+                </div>
+                <div class="col-12">
+                    <video controls class="img-fluid w-100" autoplay muted loop>
+                        <source src="video/video3.mp4" type="video/mp4">
+                        <source src="video/video3.webm" type="video/webm">
+                        <source src="video/video3.ogg" type="video/ogg">
+                        Tu navegador no admite la reproducción de video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-3 bg-dark text-white text-center">
+        <p>&copy; 2024 PepsiCo. Todos los derechos reservados.</p>
+        <ul class="footer-links list-inline">
+            <li class="list-inline-item"><a href="#" class="text-white">Política de Privacidad</a></li>
+            <li class="list-inline-item"><a href="#" class="text-white">Términos y Condiciones</a></li>
+            <li class="list-inline-item"><a href="#" class="text-white">Aviso Legal</a></li>
+        </ul>
+        <ul class="social list-inline mt-3">
+            <li class="list-inline-item"><a href="#"><img src="images/twitter.png" alt="Twitter" class="social-icon"></a></li>
+            <li class="list-inline-item"><a href="#"><img src="images/facebook.png" alt="Facebook" class="social-icon"></a></li>
+            <li class="list-inline-item"><a href="#"><img src="images/instagram.png" alt="Instagram" class="social-icon"></a></li>
+        </ul>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function deslizarImagen(anything) {
+            document.querySelector('.Pepsi').src = anything;
+        }
+    
+        function cambiarFondo(color) {
+            // Seleccionar todas las secciones excepto el footer
+            const secciones = document.querySelectorAll('section:not(.footer), .seccion');
+    
+            // Aplicar el color a cada sección
+            secciones.forEach(seccion => {
+                seccion.style.background = color;
+            });
+        }
+        //pasar de una session a otra 
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    </script>
+    </body>
+    </html>
+    
+
+
+
+

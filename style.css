@@ -1,0 +1,420 @@
+/* Fuente personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #000000; /* Fondo negro */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Encabezado */
+.navbar .logo {
+    max-width: 100%; /* Se adapta al ancho del contenedor */
+    height: auto;    /* Mantiene la proporción del logo */
+    width: 70px;     /* Tamaño inicial del logo */
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar .logo {
+        width: 40px; /* El logo se hace más pequeño en pantallas pequeñas */
+    }
+}
+
+header {
+    padding: 10px 20px; /* Espacio interno del encabezado */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Sección principal */
+.seccion {
+    background: #000000;
+    transition: background 0.5s ease;
+    padding: 20px 0;
+}
+
+.seccion h2 {
+    font-size: clamp(2.5em, 6vw, 5em); /* Tamaño responsivo */
+    line-height: 1.2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #0025ff;
+    text-align: left; /* Alineado a la izquierda */
+    margin: 0; /* Elimina márgenes automáticos que podrían centrar el elemento */
+}
+
+.seccion h2 span {
+    font-size: clamp(1em, 3vw, 2em); /* Tamaño responsivo para el span */
+    color: #fff;
+}
+
+.seccion p {
+    font-size: 1rem;
+    line-height: 1.6em;
+    color: #f3f3f3;
+    margin-top: 15px;
+    text-align: left; /* Alineado a la izquierda */
+}
+
+
+/* Navegación */
+.nav {
+    background-color: #000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    gap: 1rem;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    background-color: #0025ff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #0038ff;
+    color: #f8f9fa;
+}
+
+.hamburguesa {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsividad para navegación */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 1rem;
+        background-color: #0025ff;
+        padding: 1rem;
+        border-radius: 5px;
+        z-index: 10;
+    }
+
+    .nav-link {
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+
+    .hamburguesa {
+        display: block;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+}
+
+/* Botones */
+.btn-light {
+    color: #000;
+    background-color: #f3f3f3;
+    border-radius: 1.5rem;
+    padding: 1rem 2rem;  /* Cambiar a unidades relativas */
+    font-size: 1rem;    /* Tamaño de fuente base */
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.btn-light::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #01268a, #070ac2, #040b72);
+    z-index: 0;
+    transition: left 0.5s ease-in-out;
+}
+
+.btn-light:hover::before {
+    left: 0;
+}
+
+.btn-light:hover {
+    color: #fff;
+    border-color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.425);
+}
+
+.btn-light span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-light:hover span {
+    color: #fff;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .btn-light {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;      
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-light {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;      
+    }
+}
+
+/* Imagen principal */
+.Pepsi {
+    width: 200px; /* Ancho fijo inicial (puedes ajustarlo) */
+    height: auto; /* Mantiene la proporción original */
+    max-width: 100%; /* Asegura que no se desborde en pantallas pequeñas */
+    transition: transform 0.6s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Efecto hover */
+.Pepsi:hover {
+    transform: rotate(-15deg) scale(1.05);
+}
+
+/* Control del tamaño para pantallas más pequeñas */
+@media (max-width: 668px) {
+    .Pepsi {
+        width: 90px;
+        margin-top: 20px; 
+    }
+}
+
+/* Control del tamaño para pantallas muy pequeñas */
+@media (max-width: 380px) {
+    .Pepsi {
+        width: 150px; 
+        margin-top: 15px; 
+    }
+}
+
+
+/* Estilos generales para la sección de productos */
+.tipos-pepsi {
+    background-color: #000;
+    padding: 20px;
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+/* Título responsivo */
+.tipos-pepsi h2 {
+    font-size: clamp(2em, 5vw, 3em);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #0025ff;
+    margin-bottom: 20px;
+}
+
+.tipos-pepsi p {
+    font-size: clamp(1em, 4vw, 2em);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de las tarjetas para una mejor disposición */
+.tipos-pepsi .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espacio entre las tarjetas */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin: 0 auto; /* Asegura el centrado horizontal del contenedor */
+}
+
+/* Tarjetas de productos */
+.tipos-pepsi .card {
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px; /* Espacio alrededor de cada tarjeta */
+    max-width: 300px; /* Limita el ancho máximo de las tarjetas */
+    width: calc(100% - 40px); /* Se adapta al tamaño del contenedor */
+}
+
+/* Efecto hover para las tarjetas */
+.tipos-pepsi .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgb(236, 235, 235);
+}
+
+/* Imágenes dentro de las tarjetas */
+.tipos-pepsi .card img {
+    max-width: 150px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover para las imágenes */
+.tipos-pepsi .card img:hover {
+    transform: scale(1.1);
+}
+
+/* Texto de las tarjetas */
+.tipos-pepsi .card-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Responsividad para pantallas medianas */
+@media (max-width: 698px) {
+    .tipos-pepsi .card {
+        width: 90%; /* Ocupar el 90% del ancho disponible */
+        margin: 10px auto; /* Centra las tarjetas con margen automático */
+    }
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 668px) {
+    .tipos-pepsi .card {
+        margin: 10px auto; /* Centra las tarjetas y da espacio en los lados */
+        width: 80%; /* Hace que las tarjetas ocupen el 80% del ancho disponible */
+    }
+
+    .tipos-pepsi .card img {
+        max-width: 100px; /* Reduce el tamaño de la imagen en pantallas pequeñas */
+    }
+}
+
+/* Responsividad para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .tipos-pepsi .card {
+        width: 100%; /* Ocupa todo el ancho disponible en pantallas muy pequeñas */
+    }
+}
+
+/* Videos */
+.videos {
+    background-color: #000;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.videos h2 {
+    font-size: 4rem;
+    color: #0025ff;
+    font-weight: bold;
+}
+
+.videos h2 span {
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.videos p {
+    font-size: 1.8rem;
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .videos h2 {
+        font-size: 3rem;
+    }
+
+    .videos h2 span {
+        font-size: 2.5rem;
+    }
+
+    .videos p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .videos h2 {
+        font-size: 2.5rem;
+    }
+
+    .videos h2 span {
+        font-size: 2rem;
+    }
+
+    .videos p {
+        font-size: 1rem;
+    }
+}
+
+.responsive-videos {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: #ffffff; /* Color de fondo blanco */
+    color: #000000; /* Color del texto negro */
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1); /* Aplica el filtro blanco a las imágenes */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    filter: brightness(1) invert(1); /* Restablece el brillo al pasar el cursor */
+}
+
+
+
